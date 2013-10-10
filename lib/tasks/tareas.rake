@@ -26,27 +26,25 @@ end
 
 #Select Mongo
 task find_mileys: :environment do
+  count = 1000
   start = Time.now
 
-  WreckingBallMongo.all.each do |miley|
-    p miley.inspect
+  WreckingBallMongo.all.each_with_index do |miley, index|
+    p "#{index} ---- #{Time.now - start}" if index % count == 0
   end
 
-  finish = Time.now
-
-  p (finish - start).to_s + " Segundos listando Mileys"
+  p (Time.now - start).to_s + " Segundos listando Mileys"
 end
 
 #Select mySql
 task find_selenas: :environment do
+  count = 1000
   start = Time.now
 
-  WreckingBall.all.each do |selena|
-    p selena.inspect
+  WreckingBall.all.each_with_index do |selena, index|
+    p "#{index} ---- #{Time.now - start}" if index % count == 0
   end
 
-  finish = Time.now
-
-  p (finish - start).to_s + " Segundos listando Selenas"
+  p (Time.now - start).to_s + " Segundos listando Selenas"
 end
 
