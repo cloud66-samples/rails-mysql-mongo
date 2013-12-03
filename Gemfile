@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'mongo_mapper'
 gem 'bson_ext'
+gem 'mongoid'
 
 group :development do
   gem 'jazz_hands'
