@@ -2,7 +2,7 @@
 task create_mileys: :environment do
   start = Time.now
 
-  100000.times do
+  100.times do
     WreckingBallMongo.create
   end
 
@@ -15,7 +15,7 @@ end
 task create_selenas: :environment do
   start = Time.now
 
-  100000.times do |selena|
+  100.times do |selena|
     WreckingBall.create
   end
 
