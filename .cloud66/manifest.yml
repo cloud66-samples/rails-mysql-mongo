@@ -5,10 +5,10 @@ failover:
         configuration:
             ruby_version: 1.9.3
     mysql:
-	server:    
+        server:    
             same_as: app
     mongodb:
-	server:
+        server:
             same_as: app
 staging:
     rails:
