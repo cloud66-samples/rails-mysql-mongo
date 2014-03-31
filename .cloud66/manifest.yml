@@ -16,7 +16,7 @@ staging:
                 unique_name: app1staging
     mysql:
         server:
-            same_as: app1staging			
+            same_as: app1staging
     mongodb:
         server:
             unique_name: mongo1-staging
