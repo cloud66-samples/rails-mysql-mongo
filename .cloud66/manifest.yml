@@ -1,0 +1,27 @@
+failover:
+	rails:
+		servers:
+			server:
+				unique_name: app
+			configuration:
+				ruby_version: 1.9.3
+	mysql:
+		server:
+			same_as: app
+	mongodb:
+		server:
+			same_as: app
+staging:
+	rails:
+		servers:
+			server:
+				unique_name: app1staging
+	mysql:
+		servers:
+			server:
+				same_as: app1staging			
+	mongodb:
+		server:
+			unique_name: mongo1-staging
+		configuration:
+			version: 2.4.9
